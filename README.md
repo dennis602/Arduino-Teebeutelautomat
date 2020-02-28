@@ -6,7 +6,7 @@ kakapopo lol
 
 
 
-Das Motorshield
+## Das Motorshield
 
 Um einen Motor präzise steuern zu können, haben wir uns mit dem sogenannten Arduino Motorshield beschäftigt. Dieses ist ein weiteres Board, welches man auf den Mikrocontroller aufstecken kann. 
 
@@ -22,7 +22,20 @@ Um das Motorshield im Sketch einzubauen, muss man vorher die entsprechende Bibli
 
 
 
+## Der Steppermotor
+
+Der Steppermotor ist eine Art der Elektromotoren. Es handelt sich um einen Synchronmotor, der durch mehrere innere Spulen ein rotierendes Magnetfeld erzeugt und so eine Umdrehung in 2048 sehr feine Schritte aufteilen kann. Er entwickelt zwar eine relativ langsame Drehgeschwindigkeit, dafür aber ein hohes Drehmoment. 
+
+Durch die Aufteilung in 2048 Schritte ist die Steuerung sehr exakt. Im Sktech führt man ihn mit "AF_Stepper" ein, legt im Void Setup per "motor.setSpeed() eine Geschwindgkeit fest und kann im Void Loop durch "motor.step()" festlegen, wie viele der 2048 Schritte er machen soll und, ob er vorwärts oder rückwärts drehen soll.
+
+![Sketch Stepper](https://github.com/dennis602/Stundenprotokoll-II/raw/master/Code_motorshield_1.PNG?raw=true)
+
+Damit ist er für unser Projekt bestens geeignet.
+
 
 
 Quellen
+
 https://www.generationrobots.com/de/401113-arduino-motor-shield-rev-3.html
+
+https://funduino.de/nr-15-schrittmotor
