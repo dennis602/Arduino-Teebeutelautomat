@@ -106,7 +106,8 @@ void loop() {
   if (distance<10)                                    //Ausgangssituation des Teebeutelautomaten
 
      {
-      servoblau.write(0);
+      servoblau.write(0);                              //Der Servo dient der beweglichen Abtropfschale für den benutzen Teebeutel
+
 
       lcd.setCursor(0,0);
       lcd.print("Bitte Tee       "); 
