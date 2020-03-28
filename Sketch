@@ -1,7 +1,10 @@
-#include <AFMotor.h>
+//Steppermotor einbinden
+
+#include <AFMotor.h>                                  
 
 AF_Stepper motor(200,2);
 
+//Servo
 
 #include <Servo.h>
 
@@ -28,36 +31,43 @@ int tasterGRUENstatus=0;
 int tasterFRUCHT=30;
 int tasterFRUCHTstatus=0;
 
-//int tasterSERVO=38;
-//int tasterSERVOstatus=0;
+int switchPin = 38;    
+                 
+int val;                                              // Variable für den Pin Zustand
+int buttonState;                                      // Variable für den letzten Schalterzustand
+int buttonPresses;  
 
 //Ultraschallsensor
 
-#define trigPin 10
+#define trigPin 10                               
 #define echoPin 11
 
 
  
 void setup() {
   
-  motor.setSpeed(150);
+  motor.setSpeed(150);                                 //Motorgeschwindigkeit festlegen
 
-  pinMode(trigPin, OUTPUT);   //Ultraschall
+  pinMode(trigPin, OUTPUT);                            //Ultraschall
   pinMode(echoPin, INPUT);
 
-  pinMode(tasterSCHWARZ, INPUT);
+  pinMode(tasterSCHWARZ, INPUT);                       //Taster sind immer Inputs
 
   pinMode(tasterGRUEN, INPUT);
 
   pinMode(tasterFRUCHT, INPUT);
 
-//  pinMode(tasterSERVO, INPUT);
+  pinMode(switchPin, INPUT);
+
+  buttonState = digitalRead(switchPin);                 //Die Variable "buttonState" wird mit dem Drücken des "switchPins" verknüpft
+  
+
 
   Serial.begin(9600);
 
-  pinMode(3, OUTPUT);
+  pinMode(3, OUTPUT);                                  //Hier handelt es sich um den Pieper
 
-  servoblau.attach(34);
+  servoblau.attach(34);                                //Servo an Pin 34
 
 
   //LCD-Display
@@ -66,17 +76,22 @@ void setup() {
  
   lcd.setBacklightPin(BACKLIGHT_PIN,POSITIVE);
   
-  lcd.setBacklight(HIGH);//ohne Beleuchtung sieht man nicht viel 
+  lcd.setBacklight(HIGH);                           //Hintergrundbeleuchtung einschalten
   
 }
 
 
 void loop() {
 
-  int i = 0; 
+  int i = 0;                                        //Die Variablen für die While-Schleife des auf- und abbewegen des Teebeutels und für die Anzahl der Knopfdrücke muss jeden Durchgang wieder genullt werden
+
+  int buttonPresses = 0;                    
 
   
-  long duration, distance;
+  
+  
+  
+  long duration, distance;                           //Distanzberechnung durch Ultraschallsensor
   digitalWrite(trigPin, LOW);
   delayMicroseconds(1);
   digitalWrite(trigPin, HIGH);
@@ -88,7 +103,7 @@ void loop() {
   Serial.println(" cm");
 
 
-  if (distance<10)
+  if (distance<10)                                    //Ausgangssituation des Teebeutelautomaten
 
      {
       servoblau.write(0);
@@ -109,92 +124,151 @@ void loop() {
       
      }
 
-  tasterSCHWARZstatus=digitalRead(tasterSCHWARZ);
+  tasterSCHWARZstatus=digitalRead(tasterSCHWARZ);       //Tasterzustände auslesen
 
   tasterGRUENstatus=digitalRead(tasterGRUEN);
 
   tasterFRUCHTstatus=digitalRead(tasterFRUCHT);
 
-  //tasterSERVOstatus=digitalRead(tasterSERVO);
+  buttonState = digitalRead(switchPin);   
+
 
   
 //Schwarzer Tee
 
-  if ((tasterSCHWARZstatus == HIGH) && (distance < 10))
-  
+   if ((tasterSCHWARZstatus == HIGH) && (distance < 10))
     {
-      while(i<1)
-      {      
-      lcd.setCursor(0,0);
-      lcd.print("Schwarzer Tee");
-      lcd.setCursor(0,1);
-      lcd.print("Warte bis 1:   ");
-            
+        
+    lcd.setCursor(0,0); 
+    lcd.print("Schwarzer Tee");
+    lcd.setCursor(0,1);
+    lcd.print("Warte bis 4:   ");
 
-    motor.step(2048,FORWARD, DOUBLE);
+    motor.step(950,FORWARD, DOUBLE);          //Beutel in Tasse tauchen
+    Serial.println("Motor vor");
+    
+    
+    while(i<4)                                //Beutel auf- und abbewegen
+      {     
+
+    lcd.setCursor(0,0); 
+    lcd.print("Schwarzer Tee");
+    lcd.setCursor(0,1);
+    lcd.print("Warte bis 4:   ");
+
+ 
+    motor.step(950,FORWARD, DOUBLE);
     Serial.println("Motor vor");
     delay(1000);
-    motor.step(2048,BACKWARD, DOUBLE);
-    Serial.println("Motor rueck)"); 
+    motor.step(950,BACKWARD, DOUBLE);
+    Serial.println("Motor rueck"); 
     delay(1000);
 
     i = i + 1 ;
 
     lcd.print(i);
     
-    delay(1000);
+    delay(100);
       }
     
-    if (i = 1)
+    if (i = 4)
+    { 
+    
+    motor.step(950,BACKWARD, DOUBLE);              //Beutel aus Tasse ziehen
+    Serial.println("Motor rueck");
+    delay(1000);
+
+    int n = 0; 
+    
+    while (n < 2)                                  //akustisches Signal
     {
     digitalWrite(3, HIGH);
     delay(100);
     digitalWrite(3, LOW);
+    delay(100);
 
-    lcd.clear();
-    delay(500);  
+    n = n + 1;
+
+    }
     
-    lcd.setCursor (0,0);
-      
-    lcd.print("Tee ist fertig!");
+    lcd.clear();
+    delay(100);
+    }
+    
+          
+    
+  while (buttonPresses < 1)                       //Auf Knopfdruck Ausgangssituation wiederherstellen
+  {
+   lcd.setCursor (0,0);
+   lcd.print("Tee ist fertig!");
 
-    delay(10000);
+   lcd.setCursor (0,1);
+   lcd.print("Druecke <Fertig>"); 
+
+    
+    
+ val = digitalRead(switchPin);                     //Variabe "buttonPresses" wird per Knopfdruck des "switchPins" erhöht
+  if (val != buttonState)
+  {
+    if (val ==LOW)
+    {
+      buttonPresses++;
+       }
+     }
+
+  
+  buttonState = val;
+
     }
     }
 
 
-//Grüner Tee
+//Grüner Tee (Erklärungen siehe "Schwarzer Tee")
 
   if ((tasterGRUENstatus == HIGH) && (distance < 10))
   
     {
-      while(i<2)
-      {
-    //lcd.clear();
-    //delay(500);
+      
     lcd.setCursor(0,0);
     lcd.print("Gruener Tee");
     lcd.setCursor(0,1);
-    lcd.print("Warte bis 2:   ");
-    
-        
+    lcd.print("Warte bis 6:   ");
 
-    motor.step(2048,FORWARD, DOUBLE);
+    motor.step(950,FORWARD, DOUBLE);
+    Serial.println("Motor vor"); 
+      
+      
+      while(i<6)
+      {
+
+    lcd.setCursor(0,0);
+    lcd.print("Gruener Tee");
+    lcd.setCursor(0,1);
+    lcd.print("Warte bis 6:   ");
+        
+    motor.step(950,FORWARD, DOUBLE);
     Serial.println("Motor vor");
     delay(1000);
-    motor.step(2048,BACKWARD, DOUBLE);
-    Serial.println("Motor rueck)"); 
-    delay(1000);
+    motor.step(950,BACKWARD, DOUBLE);
+    Serial.println("Motor rueck"); 
+    delay(100);
 
     i = i + 1 ;
     
     lcd.print(i);
+    
     delay(1000);
     }
     
-    if (i = 2)
-    {
+    
+    if (i = 6)
+      {
 
+    motor.step(950,BACKWARD, DOUBLE);
+    Serial.println("Motor rueck)"); 
+    delay(1000);
+
+    
     int n = 0;  
 
     while (n < 2)
@@ -210,36 +284,64 @@ void loop() {
 
     lcd.clear();
     delay(500);  
-    
-    lcd.setCursor (0,0);
-      
-    lcd.print("Tee ist fertig!");
 
-    delay(10000);
     }
     
+    while (buttonPresses < 1)
+  {
+    
+   lcd.setCursor (0,0);
+   lcd.print("Tee ist fertig!");
+
+   lcd.setCursor (0,1);
+   lcd.print("Druecke <Fertig>"); 
+
+    
+    
+ val = digitalRead(switchPin);
+  if (val != buttonState)
+  {
+    if (val ==LOW)
+    {
+      buttonPresses++;
+       }
+     }
+  
+  buttonState = val;
+    
+    }
     }
     
 
 
-//Frucht Tee
+//Frucht Tee (Erklärungen siehe "Schwarzer Tee")
 
   if ((tasterFRUCHTstatus == HIGH) && (distance < 10))
   
-    {
-      while(i<3)
-      {
+    { 
+      
     lcd.setCursor(0,0);
     lcd.print("Frucht Tee");
     lcd.setCursor(0,1);
-    lcd.print("Warte bis 3:  ");
-    
+    lcd.print("Warte bis 8:   ");
 
-    
-    motor.step(2048,FORWARD, DOUBLE);
+    motor.step(950,FORWARD, DOUBLE);
     Serial.println("Motor vor");
+
+      
+      while(i<8)
+      {
+        
+    lcd.setCursor(0,0);
+    lcd.print("Frucht Tee");
+    lcd.setCursor(0,1);
+    lcd.print("Warte bis 8:   ");
+
+        
+    motor.step(950, FORWARD, DOUBLE);  
+    Serial.println("Motor vor");    
     delay(1000);
-    motor.step(2048,BACKWARD, DOUBLE);
+    motor.step(950,BACKWARD, DOUBLE);
     Serial.println("Motor rueck)"); 
     delay(1000);
 
@@ -250,12 +352,17 @@ void loop() {
     delay(1000);
     }
     
-    if (i = 3)
-    {
-      
+    if (i = 8)
+   {
+
+    motor.step(950,BACKWARD, DOUBLE);
+    Serial.println("Motor rueck"); 
+    delay(1000);
+
+    
     int n = 0;  
 
-    while (n < 3)
+    while (n < 2)
     {
     digitalWrite(3, HIGH);
     delay(100);
@@ -268,34 +375,40 @@ void loop() {
 
     lcd.clear();
     delay(500);  
-    
-    lcd.setCursor (0,0);
-      
-    lcd.print("Tee ist fertig!");
 
-    delay(10000);
+    
+    }
+    
+    while (buttonPresses < 1)
+  {
+   lcd.setCursor (0,0);
+   lcd.print("Tee ist fertig!");
+
+   lcd.setCursor (0,1);
+   lcd.print("Druecke <Fertig>"); 
+
+    
+    
+  val = digitalRead(switchPin);
+    if (val != buttonState)
+  {
+      if (val ==LOW)
+    {
+       buttonPresses++;
+        }
+     }
+  
+  buttonState = val;
     }
     }
 
-    
 
- // if (tasterSERVOstatus == HIGH)
-
- // {
- //   servoblau.write(0);
- //   delay(100);
- //   servoblau.write(90);
- //   delay(5000);
- //   servoblau.write(0);
- // }
-
-
-
-    
+ 
    
     else
     {
 
       Serial.println("Motor steht");
+      
   }
   }
