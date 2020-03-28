@@ -1,8 +1,7 @@
 # Arduino-Teebeutelautomat
 ## Informatik-Projekt von Peter und Dennis, 12ab
 
-##Inhaltsverzeichnis
-
+## Inhaltsverzeichnis
 [Vorwort](1)
 
 ### <a name="1"></a>Vorwort
