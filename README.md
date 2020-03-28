@@ -11,6 +11,13 @@ Im unserem ersten Projekt hatten wir sehr gute Erfahrungen Mit Arduino gemacht. 
 Einige Grundsätzliche Bauteile und Softwareelemente haben sich natürlich seit dem letzten Projekt nicht verändert, deshalb werden wir diese nicht nocheinmal erklären. Dies haben wir bereits in der Projekteseite für das Arduino-Parkhaus getan. https://github.com/dennis602/Projektseite-Arduino-Parkhaus/blob/master/README.md
 
 
+## Unser Projekt
+
+Video: https://www.youtube.com/watch?v=UV_n-1Byzow
+
+![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
+
+
 ## Das Motorshield
 
 Um einen Motor präzise steuern zu können, haben wir uns mit dem sogenannten Arduino Motorshield beschäftigt. Dieses ist ein weiteres Board, welches man auf den Mikrocontroller aufstecken kann. 
