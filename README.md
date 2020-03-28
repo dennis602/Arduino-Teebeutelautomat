@@ -14,6 +14,8 @@
 [Unsere Software](5)
 
 [Schlusswort](6)
+
+[Quellen](7)
  
 ## <a name="1"></a>Vorwort
 
@@ -21,14 +23,18 @@ Im unserem ersten Projekt hatten wir sehr gute Erfahrungen Mit Arduino gemacht. 
 Einige Grundsätzliche Bauteile und Softwareelemente haben sich natürlich seit dem letzten Projekt nicht verändert, deshalb werden wir diese nicht nocheinmal erklären. Dies haben wir bereits in der Projekteseite für das Arduino-Parkhaus getan. https://github.com/dennis602/Projektseite-Arduino-Parkhaus/blob/master/README.md
 
 
-## Unser Projekt
+## <a name="2"></a>Projektentwicklung
+
+
+
+## <a name="3"></a>Unser Projekt
 
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
 
 
-## Unsere Hardware
+## <a name="4"></a>Unsere Hardware
  Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
  
  ![Bild Hardware nummeriert](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Foto%20Nummer%20Tee.PNG?raw=true)
@@ -73,24 +79,15 @@ Damit ist er für unser Projekt bestens geeignet.
 ### 10) Verbindungskabel mit USB-Anschluss
 
 
-
+## <a name="5"></a>Unsere Software
  
 
-
-
-Der Steppermotor
-
-Der Steppermotor ist eine Art der Elektromotoren. Es handelt sich um einen Synchronmotor, der durch mehrere innere Spulen ein rotierendes Magnetfeld erzeugt und so eine Umdrehung in 2048 sehr feine Schritte aufteilen kann. Er entwickelt zwar eine relativ langsame Drehgeschwindigkeit, dafür aber ein hohes Drehmoment. 
-
-Durch die Aufteilung in 2048 Schritte ist die Steuerung sehr exakt. Im Sktech führt man ihn mit "AF_Stepper" ein, legt im Void Setup per "motor.setSpeed()" eine Geschwindgkeit fest und kann im Void Loop durch "motor.step()" festlegen, wie viele der 2048 Schritte er machen soll und, ob er vorwärts oder rückwärts drehen soll.
-
-![Sketch Stepper](https://github.com/dennis602/Stundenprotokoll-II/raw/master/Code_motorshield_1.PNG?raw=true)
-
-Damit ist er für unser Projekt bestens geeignet.
+## <a name="6"></a>Schlusswort
 
 
 
-Quellen
+
+## <a name="7"></a>Quellen
 
 https://www.generationrobots.com/de/401113-arduino-motor-shield-rev-3.html
 
