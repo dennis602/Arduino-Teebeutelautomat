@@ -25,7 +25,7 @@ Einige Grundsätzliche Bauteile und Softwareelemente haben sich natürlich seit 
 
 ## <a name="2"></a>Projektentwicklung
 
-
+Wie im Vorwort beschrieben wollten wir gerne beim Arduino für das Informatikprojekt des zweiten Halbjahres bleiben. Da uns noch gar nicht klar war, was man eigentlich alles mit dem Arduino machen kann und wie viele Möglichkeiten es gibt, bestand unsere Arbeit in den ersten Wochen darin, uns mit diesen Möglichkeiten auseinanderzusetzen. Wir haben herumexperimentiert mit Tastern, Motorshields, Motoren, Steppermotoren, Transistoren, Potentiometern und vielem mehr. Schlussendlich einigten wir uns vorläufig auf die Idee eine Teebeutelmaschine zu entwerfen. Um eine externe Stromversorgung zu gewährleisten, die den Mikrocontroller nicht gefährdet, lag unser Fokus zuerst auf dem Motorshield. sobald damit alles funktioniert hat, kam der Steppermotor an die Reihe. Dieser lässt sich wesentlich leichter und dabei flüssiger als ein konventioneller Motor ansteuern.
 
 ## <a name="3"></a>Unser Projekt
 
