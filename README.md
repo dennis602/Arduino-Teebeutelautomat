@@ -28,7 +28,16 @@ Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
 
 
-## Das Motorshield
+## Unsere Hardware
+ Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
+ ![Bild Hardware nummeriert](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Foto%20Nummer%20Tee.PNG?raw=true)
+
+
+
+
+
+
+ Das Motorshield
 
 Um einen Motor präzise steuern zu können, haben wir uns mit dem sogenannten Arduino Motorshield beschäftigt. Dieses ist ein weiteres Board, welches man auf den Mikrocontroller aufstecken kann. 
 
@@ -44,7 +53,7 @@ Um das Motorshield im Sketch einzubauen, muss man vorher die entsprechende Bibli
 
 
 
-## Der Steppermotor
+Der Steppermotor
 
 Der Steppermotor ist eine Art der Elektromotoren. Es handelt sich um einen Synchronmotor, der durch mehrere innere Spulen ein rotierendes Magnetfeld erzeugt und so eine Umdrehung in 2048 sehr feine Schritte aufteilen kann. Er entwickelt zwar eine relativ langsame Drehgeschwindigkeit, dafür aber ein hohes Drehmoment. 
 
