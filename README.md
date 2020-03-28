@@ -30,10 +30,28 @@ Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
 ## Unsere Hardware
  Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
+ 
  ![Bild Hardware nummeriert](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Foto%20Nummer%20Tee.PNG?raw=true)
+ 
+### 1) Netzgerät
 
+### 2) Breadboard
 
+### 3) Arduino MEGA Microcontroller
 
+### 4) Motorshield
+
+### 5) Ultraschallsensor
+
+### 6) LCD-Display
+
+### 7) Steppermotor
+
+### 8) Summer/Pieper ?????????
+
+### 9) Servomotor
+
+### 10) Verbindungskabel mit USB-Anschluss
 
 
 
