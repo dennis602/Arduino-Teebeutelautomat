@@ -1,9 +1,11 @@
 # Arduino-Teebeutelautomat
 ## Informatik-Projekt von Peter und Dennis, 12ab
 
-kakapopo lol
+##Inhaltsverzeichnis
 
-## Vorwort
+[Vorwort](1)
+
+### <a name="1"></a>Vorwort
 
 Im unserem ersten Projekt hatten wir sehr gute Erfahrungen Mit Arduino gemacht. Deshalb wollten wir disesmal auch gerne wieder mit dieser Soft- und Hardware arbeiten. Da unser Parkhaus aber nicht genug Potential bot, mussten wir uns etwas neues ausdenken, um den Anforderungen für dieses Halbjahr grerecht zu werden. Denn jetzt sollten wir vom Programmieren her anspruchsvoller und versierter werden. Da es mit Arduino aber noch zahlreiche weitere und auch durchaus anspruchsvollere Möglichkeiten gibt, entschieden wir uns schlussendlich dafür, beim Arduino zu bleiben. Dann haben wir erstmal, ohne uns groß Gedanken über unser Projekt zu machen, rumprobiert und sind schließlich an fogenden neuen  Elementen hängengeblieben: Taster, Stepper-Motor, Motor-Shield, Mega-Arduino und einem Summer/Pieper. Daraus wollten wir dann eine Teebeutelmaschine machen. Eine Tasse wird auf einen Platz gestellt und sobald dies ein Ultraschallsensor erkennt und ein Taster für einen zur Wahl stehenden Modus gedrückt wird. Dann fährt ein bestimmts Programm ab. Zuerst wird ein Teebeutel in die Tasse getunkt, während der Zieh-Zeit wird er einige Male hoch und runterbewegt, sobald er fertig ist, ertönt ein Signalton und zum Schluss fährt eine Konstruktion über die Tasse, auf die dann der Beutel fallen kann. Wir konnten unser großes Projekt also wieder aus mehreren kleineren Aufbauen, was ja auch letztes Mal schon das Prinzip unserer Arbeit war.
 
