@@ -35,6 +35,9 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 In dem folgenden Video sieht man einen beispielhaften Ablauf von unserem Teebeutel-Automaten.
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
+
+![Titelbild Youtube](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Fot%20Thumbnail%20tee.PNG?raw=true)
+
 Unser Sketch ist bei diesem Projekt zu lang, um ihn in Teilstücken ganz zu erklären. Hier ist der Sketch als ganzes zu sehen und jede neue Funktion ist an der Seite erkärt:
 
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
