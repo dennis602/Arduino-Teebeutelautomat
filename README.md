@@ -34,8 +34,6 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
-![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
-
 
 ## <a name="4"></a>Unsere Hardware
  Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
@@ -64,6 +62,15 @@ Um das Motorshield im Sketch einzubauen, muss man vorher die entsprechende Bibli
 ### 5) Ultraschallsensor
 
 ### 6) LCD-Display
+Das LCD-Display ist ein Bildschirm für den Arduino. Auf ihm kann man Textzeilen darstellen. 
+
+Wir haben ein sogenanntes I2C-Display, was die Arbeit deutlich vereinfacht. Man braucht nur vier Kabel. Zwei für die Stromversorgung und zwei für die Kommunikation mit dem Mikrocontroller (SDA und SCL). Jedes LCD-Display hat eine eigene "Adresse". Diese kann man mithilfe eines Adressenscanners herausfinden (s. https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#30).
+
+Anschließend kann man das Display im Sketch programmieren, indem man drei Bibliotheken einbindet. Wie das Ganze funktioniert, sieht man auf folgendem Screenshot:
+
+![LCD Erklärung](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/LCD_Erkl%C3%A4rung.PNG?raw=true)
+
+Für die Kontrasteinstellung auf dem Display gibt es hinten ein kleines schon verbautes Potentiometer, an dem man drehen kann.
 
 ### 7) Steppermotor
 Der Steppermotor ist eine Art der Elektromotoren. Es handelt sich um einen Synchronmotor, der durch mehrere innere Spulen ein rotierendes Magnetfeld erzeugt und so eine Umdrehung in 2048 sehr feine Schritte aufteilen kann. Er entwickelt zwar eine relativ langsame Drehgeschwindigkeit, dafür aber ein hohes Drehmoment. 
@@ -83,6 +90,10 @@ Damit ist er für unser Projekt bestens geeignet.
 
 
 ## <a name="5"></a>Unsere Software
+
+![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
+
+### Spezielle Programmiertechniken in unserem Sketch
  
 
 ## <a name="6"></a>Schlusswort
