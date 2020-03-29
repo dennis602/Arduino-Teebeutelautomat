@@ -32,7 +32,7 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 
 ## <a name="3"></a>Unser Projekt
 
-In dem folgenden Video sieht man einen beisoielhaften Ablauf von unserem Teebeutel-Automaten.
+In dem folgenden Video sieht man einen beispielhaften Ablauf von unserem Teebeutel-Automaten.
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
 Unser Sketch ist bei diesem Projekt zu lang, um ihn in Teilstücken ganz zu erklären. Hier ist der Sketch als ganzes zu sehen und jede neue Funktion ist an der Seite erkärt:
