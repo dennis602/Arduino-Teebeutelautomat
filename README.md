@@ -128,9 +128,9 @@ Man kann sagen, dass wir in diesem Projekt sehr viel mit Variablen gearbeitet ha
 Im übrigen ist "#define" das gleiche wie "const int". Das bedeutet nämlich, dass diese Variable nicht änderbar ist, sondern die ganze Zeit einen Wert behält. 
 
 
-## 1) Die While-Schleife
+### 1) Die While-Schleife
  
-## 2) Variablen per Knopfdruck erhöhen
+### 2) Variablen per Knopfdruck erhöhen
 
 Diese Technik haben wir benutzt, um so lange auf dem LCD-Display "Tee ist fertig" stehen zu haben, bis der Nutzer den Tee nimmt und einen Knopf zum Beenden des Vorgangs drückt. An der entsprechenden Stelle im Sketch schreiben wir also, dass der Bilschirm solange "Tee fertig!" anzeigen soll, wie diese Variable unter 1 ist.
 
