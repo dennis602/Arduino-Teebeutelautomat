@@ -83,11 +83,12 @@ Durch die Aufteilung in 2048 Schritte ist die Steuerung sehr exakt. Im Sktech f�
 Damit ist er für unser Projekt bestens geeignet.
 
 
-### 8) Summer/Pieper ?????????
+### 8) Piezosummer
+
+Ein Piezosummer sendet auf Kommando ein akustisches Signal. Theoretisch kann man durch verändern der Spannung (z.B. mit einem Potentiomeer) die Frequenz und damit die Tonhöhe dieses Signals verändern. Unser Summer ist allerdings direkt an den Mikrocontroller angeschlossen und bekommt so durchgängig eine Spannung von 5V. Im Projekt dient das Summen als Signal, dass der Tee nun fertig ist. Daraufhin soll man den Taster "fertig" betätigen und der Servomotor fährt eine Platte über die Tasse.
 
 ### 9) Servomotor
-
-
+Eon Servomotor kann Anweisungen sehr präzise ausführen. Doch er hat nur einen Bewegungsradius von 180 Grad. Durch Kommandos im Sketch bewegt sich dann sehr Servo innerhalb dieser 180 Grad Spanne vor und zurück. Im Projekt fährt der Servo eine Platte über die Tasse nd unter den tropfenden Teebeutel, sobald ein bestimmter Taster betätigt wurde.
 
 
 ### 10) Verbindungskabel mit USB-Anschluss
