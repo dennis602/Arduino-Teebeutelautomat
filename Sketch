@@ -39,7 +39,7 @@ int buttonPresses;
 
 //Ultraschallsensor
 
-#define trigPin 10                               
+#define trigPin 10                                    //#define ist das gleiche wie const int, also eine konstante Variable, die ihren Wert nicht verändert                              
 #define echoPin 11
 
 
