@@ -65,7 +65,7 @@ Um das Motorshield im Sketch einzubauen, muss man vorher die entsprechende Bibli
 ### 6) LCD-Display
 Das LCD-Display ist ein Bildschirm für den Arduino. Auf ihm kann man Textzeilen darstellen. 
 
-Wir haben ein sogenanntes I2C-Display, was die Arbeit deutlich vereinfacht. Man braucht nur vier Kabel. Zwei für die Stromversorgung und zwei für die Kommunikation mit dem Mikrocontroller (SDA und SCL). Jedes LCD-Display hat eine eigene "Adresse". Diese kann man mithilfe eines Adressenscanners herausfinden (s. https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#30).
+Wir haben ein sogenanntes I2C-Display, was die Arbeit deutlich vereinfacht. Man braucht nur vier Kabel. Zwei für die Stromversorgung und zwei für die Kommunikation mit dem Mikrocontroller (SDA und SCL). Jedes LCD-Display hat eine eigene "Adresse". Diese kann man mithilfe eines Adressenscanners herausfinden (s. ![hier](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#30) im Protokoll).
 
 Anschließend kann man das Display im Sketch programmieren, indem man drei Bibliotheken einbindet. Wie das Ganze funktioniert, sieht man auf folgendem Screenshot:
 
