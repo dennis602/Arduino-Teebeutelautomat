@@ -31,7 +31,7 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 
 
 ## <a name="3"></a>Unser Projekt
-
+Wir haben jetzt also einen Teebeutelautomaten, der drei Knöpfe für drei verschiendene Teesorten und einen Knopf zum Beenden des Teezubereitens hat. Nimmt man die Tasse weg, bewegt sich von selbst eine Schale unter den Teebeutel, auf den dieser abtropfen kann.
 In dem folgenden Video sieht man einen beispielhaften Ablauf von unserem Teebeutel-Automaten.
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
@@ -79,6 +79,14 @@ Der Ultraschallsensor (HC-SR04 misst Entfernungen zu Objekten auf Grundlage von 
 ### 6) LCD-Display
 Das Flüssigkristall-Display kann aus elektrischen Signalen visuelle machen und überträgt hierzu vorher festgelegte Zeichen auf einen Bildschirm. In unserem Fall fungiert das Display als Kommamdogeber an den Benutzer und ls Statusanzeige. Zum einen wird gesagt, was man zu tun hat. Zum Beispiel "Bitte Tee wählen" oder "drücke fertig". Zum anderen wird angezeigt, wie viele Umdrehungen der Teebeutel noch braucht( "Warte bis 4") oder dass der Tee nun fertig ist.
 
+Wir haben ein sogenanntes I2C-Display, was die Arbeit deutlich vereinfacht. Man braucht nur vier Kabel. Zwei für die Stromversorgung und zwei für die Kommunikation mit dem Mikrocontroller (SDA und SCL). Jedes LCD-Display hat eine eigene "Adresse". Diese kann man mithilfe eines Adressenscanners herausfinden (s. ![hier](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#30) im Protokoll).
+
+Anschließend kann man das Display im Sketch programmieren, indem man drei Bibliotheken einbindet. Wie das Ganze funktioniert, sieht man auf folgendem Screenshot:
+
+![LCD Erklärung](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/LCD_Erkl%C3%A4rung.PNG?raw=true)
+
+Für die Kontrasteinstellung auf dem Display gibt es hinten ein kleines schon verbautes Potentiometer, an dem man drehen kann.
+
 ### 7) Steppermotor
 Der Steppermotor ist eine Art der Elektromotoren. Es handelt sich um einen Synchronmotor, der durch mehrere innere Spulen ein rotierendes Magnetfeld erzeugt und so eine Umdrehung in 2048 sehr feine Schritte aufteilen kann. Er entwickelt zwar eine relativ langsame Drehgeschwindigkeit, dafür aber ein hohes Drehmoment. 
 
@@ -106,7 +114,31 @@ Dieses verbindet den Mikrocontroller mit dem Computer und somit mit dem Arduino-
 
 
 ## <a name="5"></a>Unsere Software
+
+![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
+
+### Spezielle Programmiertechniken in unserem Sketch
+Man kann sagen, dass wir in diesem Projekt sehr viel mit Variablen gearbeitet haben. Vorwiegend haben wir die "int" Variablen genutzt. Diese sind für unser Projekt völlig ausreichend. Man kann sie mit "int Name" benennen und ihr mit "int Name = Wert" auch einen Wert zuweisen, den sie speichern soll. Hat man das einmal vor dem Loop festgelegt, reicht es im restlichen Sketch, nur den Namen zu schreiben. 
+Im übrigen ist "#define" das gleiche wie "const int". Das bedeutet nämlich, dass diese Variable nicht änderbar ist, sondern die ganze Zeit einen Wert behält. 
+
+
+## 1) Die While-Schleife
  
+## 2) Variablen per Knopfdruck erhöhen
+
+Diese Technik haben wir benutzt, um so lange auf dem LCD-Display "Tee ist fertig" stehen zu haben, bis der Nutzer den Tee nimmt und einen Knopf zum Beenden des Vorgangs drückt. An der entsprechenden Stelle im Sketch schreiben wir also, dass der Bilschirm solange "Tee fertig!" anzeigen soll, wie diese Variable unter 1 ist.
+
+Um eine Variable per Knopfdruck zu erhöhen, muss man zuerst natürlich den Taster ganz normal einführen und bennenen. Anschließend führt man eine Variable "val" (= value) ein, auf der man Werte speichern kann. Außerdem benötigt man die Variablen "buttonState" und "ButtonPresses".
+
+![Variablen](https://github.com/dennis602/Stundenprotokoll-II/raw/master/Endknopf%20einf%C3%BChrung.PNG?raw=true)
+
+Im Setup wird dann festgelegt, dass der buttonState der ausgelesene Wert am Taster ist, also einfach, ob er gedrückt wurde.
+
+Im Loop wird bei jedem Durchgang die Variable buttonPresses, die ja die Häufigkeit des Drücken des Knopfes darstellen soll, immer gleich 0 gesetzt. An entsprechender Stelle im Sketch, also bei uns nach dem Durchlaufen des Motors, wird nun festgelegt, dass auf der Variablen val immer gespeichert wird, wie oft der Knopf gedrückt wurde, indem wir sie gleich digitalRead(switchPin) setzen. Außerdem wird programmiert, dass bei jedem Knopfdruck die Variable buttonPresses durch ++ erhöht wird.
+
+![Variable erhöhen](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/val.PNG?raw=true)
+
+Wie wir das Ganze umgesetzt haben kann man ![hier](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#32) in unserem Stundenprotokoll finden.
 
 ## <a name="6"></a>Schlusswort
 
