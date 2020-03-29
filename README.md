@@ -31,8 +31,10 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 
 
 ## <a name="3"></a>Unser Projekt
+Wir haben jetzt also einen Teebeutelautomaten, der drei Knöpfe für drei verschiendene Teesorten und einen Knopf zum Beenden des Teezubereitens hat. Nimmt man die Tasse weg, bewegt sich von selbst eine Schale unter den Teebeutel, auf den dieser abtropfen kann.
 
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
+![Video](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Screenshot_Video.PNG?raw=true)
 
 
 ## <a name="4"></a>Unsere Hardware
@@ -54,7 +56,6 @@ Um einen Motor präzise steuern zu können, haben wir uns mit dem sogenannten Ar
 Da wir aber weiterhin die Ports des Mikrokontrollers nutzen wollten, haben wir nur die nötigen Ports per Kabel mit dem Motorshield verbunden. 
 
 Das Motorshield besitzt mehrere Anschlüsse für DC-Motoren (Gleichstrommotoren), Steppermotoren (Schrittmotoren, s. ...) und Servos. Man kann eine externe Stromquelle zwischen 5 und 12 Volt anschließen, um den Mikrocontroller zu entlasten.
-
 Um das Motorshield im Sketch einzubauen, muss man vorher die entsprechende Bibliothek aus dem Internet herunterladen und sie per "#include <AFMotor.h>" einbinden. Von nun an gibt es feste Befehle, mit denen man den Motor sehr genau und präzise steuern kann. 
 
 ![Sketch Motorshield](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/includeAFMotor.PNG?raw=true)
@@ -94,7 +95,24 @@ Damit ist er für unser Projekt bestens geeignet.
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
 
 ### Spezielle Programmiertechniken in unserem Sketch
- 
+## 1) Die While-Schleife
+
+
+## 2) Variablen per Knopfdruck erhöhen
+
+Diese Technik haben wir benutzt, um so lange auf dem LCD-Display "Tee ist fertig" stehen zu haben, bis der Nutzer den Tee nimmt und einen Knopf zum Beenden des Vorgangs drückt. An der entsprechenden Stelle im Sketch schreiben wir also, dass der Bilschirm solange "Tee fertig!" anzeigen soll, wie diese Variable unter 1 ist.
+
+Um eine Variable per Knopfdruck zu erhöhen, muss man zuerst natürlich den Taster ganz normal einführen und bennenen. Anschließend führt man eine Variable "val" (= value) ein, auf der man Werte speichern kann. Außerdem benötigt man die Variablen "buttonState" und "ButtonPresses".
+
+![Variablen](https://github.com/dennis602/Stundenprotokoll-II/raw/master/Endknopf%20einf%C3%BChrung.PNG?raw=true)
+
+Im Setup wird dann festgelegt, dass der buttonState der ausgelesene Wert am Taster ist, also einfach, ob er gedrückt wurde.
+
+Im Loop wird bei jedem Durchgang die Variable buttonPresses, die ja die Häufigkeit des Drücken des Knopfes darstellen soll, immer gleich 0 gesetzt. An entsprechender Stelle im Sketch, also bei uns nach dem Durchlaufen des Motors, wird nun festgelegt, dass auf der Variablen val immer gespeichert wird, wie oft der Knopf gedrückt wurde, indem wir sie gleich digitalRead(switchPin) setzen. Außerdem wird programmiert, dass bei jedem Knopfdruck die Variable buttonPresses durch ++ erhöht wird.
+
+![Variable erhöhen](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/val.PNG?raw=true)
+
+Wie wir das Ganze umgesetzt haben kann man ![hier](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md#32) in unserem Stundenprotokoll finden.
 
 ## <a name="6"></a>Schlusswort
 
