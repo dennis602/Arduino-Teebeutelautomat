@@ -44,7 +44,7 @@ Video: https://www.youtube.com/watch?v=UV_n-1Byzow
  
 ### 1) Netzgerät
 
-### 2) Breadboard
+### 2) Breadboard mit Tastern
 
 ### 3) Arduino MEGA Microcontroller
 
