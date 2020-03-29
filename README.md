@@ -31,8 +31,11 @@ Im ganzen hat also eigentlich alles sehr gut funktioniert, doch durch Corona mus
 
 
 ## <a name="3"></a>Unser Projekt
+
 Wir haben jetzt also einen Teebeutelautomaten, der drei Knöpfe für drei verschiendene Teesorten und einen Knopf zum Beenden des Teezubereitens hat. Nimmt man die Tasse weg, bewegt sich von selbst eine Schale unter den Teebeutel, auf den dieser abtropfen kann.
+
 In dem folgenden Video sieht man einen beispielhaften Ablauf von unserem Teebeutel-Automaten.
+
 Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
 
@@ -44,15 +47,16 @@ Unser Sketch ist bei diesem Projekt zu lang, um ihn in Teilstücken ganz zu erkl
 
 
 ## <a name="4"></a>Unsere Hardware
- Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
+
+Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
  
- ![Bild Hardware nummeriert](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Foto%20Nummer%20Tee.PNG?raw=true)
+![Bild Hardware nummeriert](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Foto%20Nummer%20Tee.PNG?raw=true)
  
 ### 1) Netzgerät
 
 Dieses ist mit einer Steckdose verbunden und bietet die Möglichkeit, die ausgegebene Spannung manuell zu verändern. Durch die zwei angeschlossenen Kabel können wir über das Motorshield den Steppermotor mit Strom versorgen.
 
-### 2) Breadboard
+### 2) Breadboard mit Tastern
 Es bildet eine Erweiterung für den Mikrocontroller, da es für uns die Möglicheit bietet alle anderen Geräte mit Strom zu versorgen, obwohl der Mikrocontroller nur einen einzigen 5V Anschluss hat. Dazu verbindet man einfach den 5V Anschluss mit der Plus-Leiste des Breadboards und die Minus-Leiste mit GND (Groundpin am Mikrocontroller). Anschließend konnten wir alle weiteren Geräte an diese beiden Leisten anschließen und mit Strom versorgen. Außerdem kann man weitere externe Geräte mit dem Microcontroller oder miteinander verbinden. Ein ähnliches Breadboard haben wir im ersten Projekt auch schon verwendet, dieses ist einfach nur größer. https://github.com/dennis602/Projektseite-Arduino-Parkhaus/blob/master/README.md
 
 
@@ -118,7 +122,9 @@ Dieses verbindet den Mikrocontroller mit dem Computer und somit mit dem Arduino-
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
 
 ### Spezielle Programmiertechniken in unserem Sketch
+
 Man kann sagen, dass wir in diesem Projekt sehr viel mit Variablen gearbeitet haben. Vorwiegend haben wir die "int" Variablen genutzt. Diese sind für unser Projekt völlig ausreichend. Man kann sie mit "int Name" benennen und ihr mit "int Name = Wert" auch einen Wert zuweisen, den sie speichern soll. Hat man das einmal vor dem Loop festgelegt, reicht es im restlichen Sketch, nur den Namen zu schreiben. 
+
 Im übrigen ist "#define" das gleiche wie "const int". Das bedeutet nämlich, dass diese Variable nicht änderbar ist, sondern die ganze Zeit einen Wert behält. 
 
 
