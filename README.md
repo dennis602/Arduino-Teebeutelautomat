@@ -27,6 +27,7 @@ Einige Grundsätzliche Bauteile und Softwareelemente haben sich natürlich seit 
 
 
 ## <a name="2"></a>Projektentwicklung
+Unsere genaue Entwicklung kann man in unserem ![Protokoll](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md) nachvollziehen.
 
 Wie im Vorwort beschrieben wollten wir gerne beim Arduino für das Informatikprojekt des zweiten Halbjahres bleiben. Allerdings kannten wir uns anders als im ersten Projekt schon mit Arduino aus und mussten so die Grundlagen nicht nochmal erlernen. Da uns trotzdem noch gar nicht klar war, was man eigentlich alles mit dem Arduino machen kann und wie viele Möglichkeiten es gibt, bestand unsere Arbeit in den ersten Wochen darin, uns mit diesen Möglichkeiten auseinanderzusetzen. Wir haben herumexperimentiert mit Tastern, Motorshields, Motoren, Steppermotoren, Transistoren, Potentiometern und vielem mehr. Schlussendlich einigten wir uns vorläufig auf die Idee eine Teebeutelmaschine zu entwerfen. 
 
