@@ -166,21 +166,37 @@ Wie wir das Ganze umgesetzt haben kann man ![hier](https://github.com/dennis602/
 
 ## <a name="7"></a>Quellen
 https://www.aeq-web.com/arduino-motor-shield-dc-motor-control/?ref=yt
+
 https://stormarnschule12.github.io/Arduino-car/
+
 https://www.arduino.cc/en/Tutorial/TransistorMotorControl
+
 https://www.youtube.com/watch?v=aAxbp507B9I
+
 https://www.youtube.com/watch?v=QlDH2SApocM
+
 https://funduino.de/nr-5-taster-am-arduino
+
 https://starthardware.org/motorsteuerung-direkt-per-arduino/
+
 https://www.youtube.com/watch?v=QlDH2SApocM
+
 https://funduino.de/nr-15-schrittmotor
+
 https://i.ytimg.com/vi/jvlTKi9nMO0/maxresdefault.jpg
+
 https://funduino.de/nr-19-i%C2%B2c-display
+
 https://funduino.de/anleitung-4x20-i%C2%B2c-lcd-modul
+
 https://www.youtube.com/watch?v=NyiWH5Mc7ek
+
 https://www.aeq-web.com/i2c-display-mit-dem-arduino-uno/
+
 https://www.roboternetz.de/community/threads/68468-Arduino-Mega-mit-LCD-I2C
+
 https://www.generationrobots.com/de/401113-arduino-motor-shield-rev-3.html
+
 https://funduino.de/nr-15-schrittmotor
 
 Wo wir welche Quelle genutzt haben, kann man an entsprechender Stelle im ![Protokoll](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md) nachvollziehen
