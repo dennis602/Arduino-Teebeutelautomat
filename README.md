@@ -166,6 +166,8 @@ Wie wir das Ganze umgesetzt haben kann man ![hier](https://github.com/dennis602/
 
 ## <a name="6"></a>Schlusswort
 
+Trotz einer weltweiten Pandemie haben wir unser Projekt also fertiggestellt. Wir haben alles geschafft, was wir uns vorgenommen hatten und noch viel mehr. Unsere Arbeit war gerade zu Anfang sehr sprunghaft und wenig konsequent oder fokussiert auf ein Thema, doch gerade das hat uns einen breiteren Horizont über Arduino verschafft, als wir ihn noch im ersten Projekt hatten. So können wir jetzt zum Beispiel auch mit großen und kleinen Potentiometern umgehen, ohne diese im endgültigen Projekt zu brauchen. Auch programmiertechnisch haben wir uns sehr stark gesteigert und unsere Fähigkeiten erweitert.  Ob Variablen in While-Schleifen oder per Knopfdruck, Motorshields oder  riesige Mikrocontroller, jetzt kennen wir diese Verfahren und können mit ihnen Umgehen.
+Mit diesem Resultat hat am Beginn des Projektes keiner von uns gerechnet. Wir sind sehr stolz auf unsere Lego-Arduino-Konstruktion und wie sie funktioniert. Ein autonomer Teebeutelautomat, der einem sogar akustisch Bescheid sagt, wenn der Tee fertig ist, war eine geniale Idee, die wir genial umgesetzt haben.
 
 
 
