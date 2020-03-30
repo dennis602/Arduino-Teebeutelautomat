@@ -147,6 +147,8 @@ Im übrigen ist "#define" das gleiche wie "const int". Das bedeutet nämlich, da
 
 
 ### 1) Die While-Schleife
+
+![While Schleife](https://github.com/dennis602/Stundenprotokoll-II/blob/master/While%20Schleife.PNG?raw=true)
  
 ### 2) Variablen per Knopfdruck erhöhen
 
