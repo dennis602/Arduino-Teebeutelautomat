@@ -16,9 +16,6 @@
 [Schlusswort](#6)
 
 [Quellen](#7)
-
-
-![TEst](https://pbs.twimg.com/media/CJQSlzhWcAAUQ_p.jpg)
  
 ## <a name="1"></a>Vorwort
 
