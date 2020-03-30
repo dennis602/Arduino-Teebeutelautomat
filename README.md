@@ -48,10 +48,15 @@ Video: https://www.youtube.com/watch?v=UV_n-1Byzow
 
 ![Titelbild Youtube](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Fot%20Thumbnail%20tee.PNG?raw=true)
 
-Unser Sketch ist bei diesem Projekt zu lang, um ihn in Teilstücken ganz zu erklären. Hier ist der Sketch als ganzes zu sehen und jede neue Funktion ist an der Seite erkärt:
+Unser Sketch ist bei diesem Projekt zu lang, um ihn in Teilstücken ganz zu erklären. Hier ist der Sketch als ganzes zu sehen und jede neue Funktion ist an der Seite erkärt.
 
 ![Sketch](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Sketch)
 
+Zudem sind die Besonderheiten unserer Programmiertechnik in [Unsere Software](#5) nachlesen.
+
+## Bilder vom Teebeutelautomaten
+![Bild Teebeutelautomat 1](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Teeautomat%20(2).JPG?raw=true)
+![Bild Teebeutelautomat 2](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Teeautomat%20(1).JPG?raw=true)
 
 ## <a name="4"></a>Unsere Hardware
 
