@@ -210,4 +210,4 @@ https://www.generationrobots.com/de/401113-arduino-motor-shield-rev-3.html
 
 https://funduino.de/nr-15-schrittmotor
 
-Wo wir welche Quelle genutzt haben, kann man an entsprechender Stelle im ![Protokoll](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md) nachvollziehen
+Wo wir welche Quelle genutzt haben, kann man an entsprechender Stelle im ![Protokoll](https://github.com/dennis602/Stundenprotokoll-II/blob/master/README.md) nachvollziehen.
