@@ -57,7 +57,7 @@ Zudem sind die Besonderheiten unserer Programmiertechnik in [Unsere Software](#5
 ## Bilder vom Teebeutelautomaten
 ![Bild Teebeutelautomat 1](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Teeautomat%20(2).JPG?raw=true)
 ![Bild Teebeutelautomat 2](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Teeautomat%20(1).JPG?raw=true)
-
+![Bild LCD](https://github.com/dennis602/Projektseite-Arduino-Teebeutelautomat/blob/master/Teeautomat_Bildschirm%20(2).JPG?raw=true)
 ## <a name="4"></a>Unsere Hardware
 
 Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware mit Nummern versehen.
