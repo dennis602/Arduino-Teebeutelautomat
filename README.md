@@ -69,7 +69,9 @@ Auf dem folgendem Bild sieht man unsere ausgebreitete, nicht eingebaute Hardware
 Dieses ist mit einer Steckdose verbunden und bietet die Möglichkeit, die ausgegebene Spannung manuell zu verändern. Durch die zwei angeschlossenen Kabel können wir über das Motorshield den Steppermotor mit Strom versorgen.
 
 ### 2) Breadboard mit Tastern
-Es bildet eine Erweiterung für den Mikrocontroller, da es für uns die Möglicheit bietet alle anderen Geräte mit Strom zu versorgen, obwohl der Mikrocontroller nur einen einzigen 5V Anschluss hat. Dazu verbindet man einfach den 5V Anschluss mit der Plus-Leiste des Breadboards und die Minus-Leiste mit GND (Groundpin am Mikrocontroller). Anschließend konnten wir alle weiteren Geräte an diese beiden Leisten anschließen und mit Strom versorgen. Außerdem kann man weitere externe Geräte mit dem Microcontroller oder miteinander verbinden. Ein ähnliches Breadboard haben wir im ersten Projekt auch schon verwendet, dieses ist einfach nur größer. https://github.com/dennis602/Projektseite-Arduino-Parkhaus/blob/master/README.md
+Es bildet eine Erweiterung für den Mikrocontroller, da es für uns die Möglicheit bietet alle anderen Geräte mit Strom zu versorgen, obwohl der Mikrocontroller nur einen einzigen 5V Anschluss hat. Dazu verbindet man einfach den 5V Anschluss mit der Plus-Leiste des Breadboards und die Minus-Leiste mit GND (Groundpin am Mikrocontroller). Anschließend konnten wir alle weiteren Geräte an diese beiden Leisten anschließen und mit Strom versorgen. Außerdem kann man weitere externe Geräte mit dem Microcontroller oder miteinander verbinden. Ein ähnliches Breadboard haben wir im ersten Projekt auch schon verwendet, dieses ist einfach nur größer. Hier ist die ![Projektseite](https://github.com/dennis602/Projektseite-Arduino-Parkhaus/blob/master/README.md) vom ersten Halbjahr. 
+
+Außerdem stecken auf dem Breadboard noch vier Taster, drei davon für die Teesorten und einer, wenn der Tee fertig ist. Diese sind über jeweils einen Widerstand durch das Breadboard an den Strom und an verschiedene Ports des Mikrocontrollers angeschlossen.
 
 
 
@@ -149,6 +151,10 @@ Im übrigen ist "#define" das gleiche wie "const int". Das bedeutet nämlich, da
 ### 1) Die While-Schleife
 
 ![While Schleife](https://github.com/dennis602/Stundenprotokoll-II/blob/master/While%20Schleife.PNG?raw=true)
+
+Für die While Schleife wird der Variable "int" im Loop ein Startwert zugeordnet. Dieser ist  in dem Besispiel 0. Dann erhöht sich dieser Wert jedesmal um 1, wenn ein bestimmter Abschnitt im Loop wiederholt wird. Durch den Ausdruck "i = i+1" erhöht sich die Variable nach jedem Mal um einen. Das passiert solange, bis ein vorher festgelegter Wert erreicht wird. In diesem Fall ist das durch "i < 5" 5. Dieser kleine Ausdruck im Loop aus Pin 13 High und Low schalten läuft also 5 mal ab. Erst danach würde der Rest des Sketches weitergehen oder wenn das das Ende wäre, würde er von vorne beginnen. In unserem Sketch bnötigen wir die While Schleife für das hoch und runterbewegen des Teebeutels, nachdem der jeweilige Taster betätigt wurde. 
+
+Im Prinzip könnte man die While Schleife auch weglassen und einfach den zu wiederholenden Teil ganz oft untereinanderschreiben, aber durch diese wird der Sketch einfach übersichtlicher.
  
 ### 2) Variablen per Knopfdruck erhöhen
 
